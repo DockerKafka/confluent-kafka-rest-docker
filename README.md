@@ -1,7 +1,11 @@
 confluent-kafka-rest-docker
 ============
-Confluent configured as kafka-rest service
+Dockerfile for [Confluent](http://docs.confluent.io/1.0.1/index.html) configured as kafka-rest service
 This configuration help to use only the kafka-rest wrapper only from Confluent.
+
+The image is available directly from [DockerHub](https://hub.docker.com/r/dockerkafka/confluent-kafka-rest/)
+
+You can browse the source in [GitHub](https://github.com/DockerKafka/confluent-kafka-rest-docker)
 
 ## Usage
 
