@@ -1,0 +1,24 @@
+zookeeper:
+  image: dockerkafka/zookeeper
+  ports:
+   - "2181:2181"
+   - "2888:2888"
+   - "3888:3888"
+   - "5000:5000"
+
+kafka:
+  image: dockerkafka/kafka
+  ports:
+    - "9092:9092"
+  links:
+    - zookeeper:zookeeper
+
+confluent:
+  build: .
+  ports:
+    - "8082:8082"
+  links:
+    - zookeeper:zookeeper
+    - kafka:kafka
+  volumes:
+    - ./image/conf:/opt/confluent-1.0.1/etc
